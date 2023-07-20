@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    
+    <script src="js/app_lecon3.js" defer></script>
+</head>
+<body>
+    <div class="ui inverted fixed menu">
+
+        <div class="header item">Tutoriel découverte</div>
+    </div>
+
+    <div class="ui main container" id="app">
+        
+        <!-- <input type="checkbox" v-model="success" id="#">
+        <input type="text" v-model="message">
+        <p>{{ message }}</p>
+        <div class="ui mesage" :class="cls">
+            
+            Salut les gens -->
+
+            <p>
+                Prénom : {{ firstname }}
+                Nom : {{ lastname }}
+                <br>
+                Nom complet : <input type="text" v-model="fullname">
+            </p>
+        </div>
+        
+        
+        
+    </div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.5/vue.js"></script>
+    
+</body>
+</html>
