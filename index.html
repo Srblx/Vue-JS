@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <div class="ui inverted fixed menu">
+
+        <div class="header item">Tutoriel</div>
+    </div>
+
+    <div class="ui main container" id="app">
+
+        <!--* v-bind permet d'exploiter un link dynamique parametre dans les data du fichier script -->
+        <!--* Le + permet d'envoyer vers une page bien precise -->
+        <!--! <a v-bind:href="link + '/blog-single.html'"> {{ message }}</a> -->
+        <!--* deuxieme methode un peu plus simple -->
+        <a :href="link" :title="message">{{ message }}</a>
+
+        <ul>
+            <!-- boucler un element -->
+            <li v-for="person in persons">{{ person }}</li>
+        </ul>
+
+        <!-- v-on pour ecouté un evenement (click, change...) -->
+        <!--* v-on:click = @click -->
+        <i class="close icon" @click="open" style="cursor: pointer;">open</i>
+        <br>
+        <i class="close icon" @click="close" style="cursor: pointer;">close</i>
+
+
+        <!--* v-if permet de verifier si la variable = true dans se cas la le bloque s'affiche si c'est pas le cas cela supprime l'element du code HTML-->
+        <div class="ui succes message" v-if="succes">
+            <p>Bravo votre enregistrement a marché.</p>
+        </div>
+        <!--* :value = v-model  -->
+        <div class="ui message" :style="style()">
+        <input type="text" v-model="message">
+
+        <input type="checkbox" name="" id="" v-model="succes">
+    </div>
+
+
+        <!-- Si on veux affiche l'echec de la condition v-else -->
+        <!-- ! v-if="!succes" fonctionne aussi -->
+        <div class="ui error message" v-else>
+            <p> {{ message }} </p>
+        </div>
+    </div>
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.5/vue.js"></script>
+    
+</body>
+</html>
