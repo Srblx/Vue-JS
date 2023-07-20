@@ -9,10 +9,11 @@
 <body>
     <div class="ui inverted fixed menu">
 
-        <div class="header item">Tutoriel</div>
+        <div class="header item">Tutoriel découverte</div>
     </div>
 
     <div class="ui main container" id="app">
+        
 
         <!--* v-bind permet d'exploiter un link dynamique parametre dans les data du fichier script -->
         <!--* Le + permet d'envoyer vers une page bien precise -->
@@ -42,15 +43,28 @@
 
         <input type="checkbox" name="" id="" v-model="succes">
     </div>
-
-
-        <!-- Si on veux affiche l'echec de la condition v-else -->
-        <!-- ! v-if="!succes" fonctionne aussi -->
-        <div class="ui error message" v-else>
-            <p> {{ message }} </p>
-        </div>
+    
+    
+    <!-- Si on veux affiche l'echec de la condition v-else -->
+    <!-- ! v-if="!succes" fonctionne aussi -->
+    <div class="ui error message" v-else>
+        <p> {{ message }} 
+        </p>
     </div>
     
+    
+    <div class="lesson2">
+    
+        <p>{{ persons }}</p>
+    
+        <button @click="addPerson">Ajouter une personne</button>
+        <!-- <button @click="addPerson">Ajouter une personne</button> -->
+    <br><a href="timer.html">Timer</a>
+    </div>
+
+
+</div>
+
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.5/vue.js"></script>
